@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Añade listeners para todos los botones que muestran los valores cuando entra el mouse, y los oculta cuando sale
+    // Añade listeners para todos los botones que muestran los valores, y los oculta cuando hacen contacto con el mouse
     teclas.forEach(function(teclas) {
         teclas.addEventListener('mouseenter', ocultarValores);
         teclas.addEventListener('mouseleave', mostrarValores);
