@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función que oculta el valor de todas las teclas
     function ocultarValores() {
         teclas.forEach(function(teclas) {
-            teclas.value = '*';
         });
     }
 
