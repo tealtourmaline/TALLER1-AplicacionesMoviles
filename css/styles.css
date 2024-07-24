@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #FFD700; /* Amarillo brillante */
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.country-selector {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.cart, .search {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD700; /* Amarillo brillante */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
