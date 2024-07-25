@@ -1,16 +1,9 @@
 /* styles.css */
 
-/* Reset de estilos básicos */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #fff; /* Color blanco */
+  background-color: #fff;
 }
 
 header {
@@ -55,6 +48,7 @@ nav {
   color: black;
   font-weight: bold;
   padding: 10px;
+  font-size: 1rem; /* Tamaño de texto ajustable */
 }
 
 .menu a:hover {
@@ -63,7 +57,7 @@ nav {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 2rem; /* Ajusta el tamaño de fuente para responsividad */
   font-weight: bold;
   flex: 2;
   text-align: center;
@@ -72,6 +66,7 @@ nav {
 select {
   padding: 10px;
   font-family: 'Arial', sans-serif;
+  font-size: 1rem;
 }
 
 .icon {
@@ -79,50 +74,34 @@ select {
   height: 24px;
 }
 
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  background-color: #FFD700;
-  position: relative;
-}
-
-/* styles.css */
-
-/* Carrusel */
-/* styles.css */
-
-/* Carrusel */
-/* styles.css */
-
-/* styles.css */
-
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
-  width: 100%; /* Asegura que el carrusel ocupe todo el ancho del contenedor */
+  width: 100%;
+  margin-top: 20px; /* Espacio superior para el carrusel */
 }
 
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease;
-  width: 100%; /* Ancho total del carrusel: 100% del contenedor */
+  width: 300%; /* Ancho total del carrusel: 100% por cada imagen */
 }
 
 .carousel-images a {
   display: block;
-  width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor visible */
+  width: 33.333%; /* Cada imagen ocupa un tercio del ancho total */
+  flex-shrink: 0;
 }
 
 .carousel-images img {
-  width: 80%; /* Ajusta este valor para hacer las imágenes más pequeñas */
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto; /* Centra la imagen horizontalmente */
+  margin: 0;
 }
 
-button.prev, button.next {
+button.prev,
+button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -131,7 +110,7 @@ button.prev, button.next {
   border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 1; /* Asegura que los botones estén encima de las imágenes */
+  z-index: 1;
 }
 
 button.prev {
@@ -142,7 +121,85 @@ button.next {
   right: 10px;
 }
 
+/* Nueva sección de texto */
+.text-section {
+  background-color: #fff; /* Fondo blanco */
+  padding: 20px 10px; /* Espaciado interior */
+  text-align: center; /* Centrar el texto */
+  color: #a49999; /* Color del texto */
+  font-size: clamp(1.2rem, 2vw, 2rem); /* Tamaño del texto responsivo */
+  font-weight: bold; /* Negrita */
+  margin: 20px 0; /* Espaciado vertical */
+  line-height: 1.0; /* Espaciado entre líneas */
+}
 
+/* Estilo para la sección de la galería */
+.gallery-section {
+  display: flex;
+  justify-content: space-between; /* Ajusta el espacio entre los elementos */
+  align-items: flex-start; /* Alinea las imágenes al inicio */
+  margin: 0 40px; /* Margen lateral para el contenedor */
+  padding: 20px 0; /* Padding superior e inferior para el contenedor */
+  background-color: #fff;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples filas si es necesario */
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column; /* Coloca la imagen y el texto en una columna */
+  align-items: center; /* Centra el contenido en la columna */
+  width: calc(25% - 20px); /* Tamaño del contenedor con ajuste para el espacio */
+  margin: 10px 10px; /* Margen lateral entre contenedores */
+}
+
+.gallery-img {
+  width: 100%; /* Tamaño máximo para adaptarse al contenedor */
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.3s ease; /* Transición suave al escalar */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.gallery-img:hover {
+  transform: scale(1.05); /* Escala la imagen al pasar el cursor */
+}
+
+.gallery-item h1 {
+  font-size: clamp(16px, 2.5vw, 18px); /* Tamaño de texto responsivo */
+  font-weight: bold; /* Texto en negrita */
+  color: #333; /* Color del texto */
+  margin: 10px; /* Espaciado superior e inferior del texto */
+  text-align: center; /* Centrar el texto */
+  transition: font-size 0.3s ease; /* Transición suave al cambiar el tamaño del texto */
+}
+
+/* Responsive Design for Gallery Section */
+@media screen and (max-width: 992px) {
+  .gallery-item {
+    width: calc(33.333% - 20px); /* Ajusta a tres imágenes por fila en tabletas grandes */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-item {
+    width: calc(50% - 20px); /* Ajusta a dos imágenes por fila en tabletas y móviles */
+  }
+
+  .gallery-item h1 {
+    font-size: clamp(14px, 2vw, 16px); /* Ajusta el tamaño del texto para dispositivos más pequeños */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-item {
+    width: calc(100% - 20px); /* Una imagen por fila en móviles */
+  }
+
+  .gallery-item h1 {
+    font-size: clamp(12px, 3vw, 14px); /* Más pequeño aún en móviles */
+  }
+}
 
 main {
   padding: 20px;
@@ -150,12 +207,7 @@ main {
 }
 
 .collection {
-  margin-top: 20px;
-}
-
-.collection h1 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .products {
@@ -166,67 +218,121 @@ main {
 }
 
 .product {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
+  width: calc(33.333% - 20px); /* Tres productos por fila */
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
   text-align: center;
-  max-width: 200px;
+  transition: transform 0.3s ease;
 }
 
 .product img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: clamp(14px, 1vw, 18px); /* Tamaño de texto responsivo */
+}
+
+.product:hover {
+  transform: translateY(-10px);
 }
 
 footer {
   background-color: #FFD700;
+  color: #000;
   padding: 20px 0;
   text-align: center;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
-.footer-left, .footer-right {
-  color: #333;
+.footer-left {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 40px; /* Espacio entre la imagen, el texto y los enlaces */
 }
 
-.footer-right a {
-  text-decoration: none;
-  color: #333;
-  margin: 0 10px;
-  font-weight: bold;
+.footer-logo {
+  width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto;
 }
 
-.footer-right a:hover {
+.footer-text {
+  text-align: center; /* Centra el texto */
+  gap: 20px;
+}
+
+.footer-text p {
+  margin: 15px 10px; /* Margen superior e inferior para los párrafos */
+  font-weight: bold; /* Negrita para el texto */
+  font-size: 14px; /* Tamaño del texto */
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px; /* Espacio entre los enlaces */
+}
+
+.footer-links a {
   color: #000;
+  text-decoration: none;
+  font-weight: bold; /* Negrita para los enlaces */
+  transition: color 0.3s ease;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .hero-section {
-      flex-direction: column;
+.footer-links a:hover {
+  color: #FFD700;
+  
+}
+
+/* Responsive Design para el pie de página */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Cambia a diseño de columna para pantallas pequeñas */
+    align-items: center; /* Centra todos los elementos */
   }
 
-  .carousel-images {
-      flex-direction: column;
+  .footer-left {
+    text-align: center; /* Alinea el texto al centro */
   }
 
-  .hero-img {
-      width: 100%;
-      margin: 10px 0;
+  .footer-links {
+    flex-direction: column; /* Cambia a diseño de columna para los enlaces en pantallas pequeñas */
+    gap: 10px; /* Espacio entre los enlaces */
   }
 }
 
-@media (max-width: 480px) {
-  .carousel-button {
-      font-size: 18px;
-      padding: 5px;
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: calc(50% - 20px); /* Dos productos por fila en tabletas */
   }
 }
+
+@media screen and (max-width: 480px) {
+  .product {
+    width: calc(100% - 20px); /* Un producto por fila en móviles */
+  }
+
+  .carousel-images img {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+

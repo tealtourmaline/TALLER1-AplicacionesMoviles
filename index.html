@@ -1,12 +1,13 @@
-<!-- Index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Figma Store</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="menu-home">
         <header>
@@ -28,41 +29,92 @@
             </nav>
         </header>
     </div>
-    <div class="hero-section">
-        <div class="carousel-wrapper">
-            <div class="carousel-images">
-                <a href="page1.html"><img src="images/labios.jpg" alt="Hero Image 1" class="hero-img"></a>
-                <a href="page2.html"><img src="images/playa.jpg" alt="Hero Image 2" class="hero-img"></a>
-                <a href="page3.html"><img src="images/3.jpg" alt="Hero Image 3" class="hero-img"></a>
-                
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-images">
+            <a href="#"><img src="images/playa.jpg" alt="Hero Image 1"></a>
+            <a href="#"><img src="images/labios.jpg" alt="Hero Image 2"></a>
+            <a href="#"><img src="images/3.jpg" alt="Hero Image 3"></a>
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+    </div>
+
+    <!-- Nueva sección para el texto -->
+    <div class="text-section">
+        <h1>FIGMA'S COLLECTION OF</h1>
+        <h1>LAYERS AND COMPONENTS FOR</h1>
+        <h1>YOU AND YOUR FRIENDS</h1>
+    </div>
+       <!-- Nueva galería de imágenes con cajas de texto -->
+    <div class="gallery-section">
+        <div class="gallery-item">
+            <img src="images/1.png" alt="Gallery Image 1" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/2.png" alt="Gallery Image 2" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/3.png" alt="Gallery Image 3" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/4.png" alt="Gallery Image 4" class="gallery-img">
+            <h1>Precio</h1>
         </div>
     </div>
-    <main>
-        <section class="collection">
-            <h1>FIGMA'S COLLECTION OF LAYERS AND COMPONENTS FOR YOU AND YOUR FRIENDS</h1>
-            <div class="products">
-                <div class="product">
-                    <img src="images/product1.png" alt="Rainbow logo tee">
-                    <p>Rainbow logo tee - $20</p>
-                </div>
-                <div class="product">
-                    <img src="images/product2.png" alt="Figma logo hat">
-                    <p>Figma logo hat - $20</p>
-                </div>
-                <!-- Repite esta estructura para los demás productos -->
-            </div>
-        </section>
-    </main>
+
+    <div class="gallery-section">
+        <div class="gallery-item">
+            <img src="images/5.png" alt="Gallery Image 5" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/6.png" alt="Gallery Image 6" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/7.png" alt="Gallery Image 7" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/8.png" alt="Gallery Image 8" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <div class="gallery-item">
+            <img src="images/9.png" alt="Gallery Image 9" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/10.png" alt="Gallery Image 10" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/11.png" alt="Gallery Image 11" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+        <div class="gallery-item">
+            <img src="images/12.png" alt="Gallery Image 12" class="gallery-img">
+            <h1>Precio</h1>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-left">
-                <p>THE FIGMA STORE</p>
-                <p>OBJECTS THAT INSPIRE.</p>
+                <img src="images/logo.png" alt="Footer Logo" class="footer-logo"> <!-- Imagen -->
+                
             </div>
             <div class="footer-right">
+                <div class="footer-text">
+                    <p>THE FIGMA STORE</p>
+                    <p>OBJECTS THAT INSPIRE.</p>
+                </div>
                 <a href="#">FIGMA</a>
                 <a href="#">TWITTER</a>
                 <a href="#">INSTAGRAM</a>
@@ -70,6 +122,9 @@
             </div>
         </div>
     </footer>
+    
+    
     <script src="js/funciones.js"></script>
 </body>
+
 </html>
