@@ -1,3 +1,12 @@
+/* styles.css */
+
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -76,16 +85,148 @@ select {
   align-items: center;
   padding: 20px 0;
   background-color: #FFD700;
+  position: relative;
 }
 
-.hero-img {
-  width: 33%;
-  margin: 0 10px;
+/* styles.css */
+
+/* Carrusel */
+/* styles.css */
+
+/* Carrusel */
+/* styles.css */
+
+/* styles.css */
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Asegura que el carrusel ocupe todo el ancho del contenedor */
 }
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* Ancho total del carrusel: 100% del contenedor */
+}
+
+.carousel-images a {
+  display: block;
+  width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor visible */
+}
+
+.carousel-images img {
+  width: 80%; /* Ajusta este valor para hacer las imágenes más pequeñas */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; /* Asegura que los botones estén encima de las imágenes */
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+
 
 main {
   padding: 20px;
   text-align: center;
 }
 
-.collect
+.collection {
+  margin-top: 20px;
+}
+
+.collection h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 200px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #FFD700;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+  color: #333;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.footer-right a:hover {
+  color: #000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-section {
+      flex-direction: column;
+  }
+
+  .carousel-images {
+      flex-direction: column;
+  }
+
+  .hero-img {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-button {
+      font-size: 18px;
+      padding: 5px;
+  }
+}

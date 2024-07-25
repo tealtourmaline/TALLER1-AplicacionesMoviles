@@ -1,0 +1,163 @@
+/* home-styles.css */
+
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left-container {
+    width: 30%; /* Ajusta este valor según el tamaño deseado para el contenedor izquierdo */
+    background-color: #ffc700; /* Fondo para la imagen, cambia según tu diseño */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinea la imagen a la izquierda */
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+}
+
+.left-container img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffc700;
+    color: #333;
+    display: flex;
+    justify-content: flex-start; /* Justifica el contenido a la izquierda */
+    align-items: flex-start; /* Alinea el contenido al principio */
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita scrollbars */
+}
+
+.container {
+    text-align: left; /* Justifica el texto a la izquierda */
+    background-color: #ffc700; /* Cambié el fondo del contenedor para mejorar el contraste */
+    padding: 2vw; /* Usa unidades vw para el padding */
+    border-radius: 1vw;
+    max-width: 60vw; /* Ajusta el tamaño máximo del contenedor con vw */
+    width: 80vw; /* Ajusta el ancho del contenedor con vw */
+    margin-left: 30%; /* Deja espacio para el contenedor izquierdo */
+    position: relative; /* Para asegurarse de que el contenido no se solape con el contenedor izquierdo */
+}
+
+header {
+    margin-bottom: 2vw; /* Ajusta el margen con unidades vw */
+}
+
+.main-title {
+    font-size: 5vw; /* Tamaño de fuente en relación al ancho de la ventana */
+    color: #000000;
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
+.subtitle {
+    font-size: 10vw; /* Tamaño de fuente en relación al ancho de la ventana */
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.selection-section {
+    margin-top: 2vw; /* Ajusta el margen con unidades vw */
+}
+
+.description {
+    font-size: 2vw; /* Tamaño de fuente en relación al ancho de la ventana */
+    margin-bottom: 2vw; /* Ajusta el margen con unidades vw */
+    text-transform: uppercase; /* Texto de la descripción en mayúsculas */
+    color: #000000;
+}
+
+.texto-final {
+    font-size: 1.5vw; /* Tamaño de fuente en relación al ancho de la ventana */
+    margin-top: 3vw; /* Ajusta el margen con unidades vw */
+    color: #000000;
+}
+
+.selection-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    align-items: center;
+    gap: 1vw; /* Ajusta el espacio entre elementos con unidades vw */
+}
+
+.country-select {
+    padding: 1vw;
+    font-size: 2vw; /* Tamaño de fuente en relación al ancho de la ventana */
+    background-color: #ffc700;
+    border: 2px solid #000000;
+    border-radius: 2vw; /* Radio de borde en relación al tamaño de la ventana */
+    text-transform: uppercase; /* Opcional: Para los países en mayúsculas */
+}
+
+.go-button {
+    background-color: #000000;
+    color: #ffc700;
+    padding: 1vw 2vw; /* Usa unidades vw para el padding */
+    font-size: 2vw; /* Tamaño de fuente en relación al ancho de la ventana */
+    border: none;
+    border-radius: 2vw; /* Radio de borde en relación al tamaño de la ventana */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* Botón en mayúsculas */
+}
+
+.go-button:hover {
+    background-color: #000000;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* Cambia la dirección del body a columna en pantallas más pequeñas */
+        align-items: center; /* Centra el contenido del body en pantallas más pequeñas */
+    }
+
+    .left-container {
+        width: 100%;
+        height: auto;
+        position: relative; /* Cambia a relativo en pantallas más pequeñas */
+        margin-bottom: 2vw; /* Agrega espacio entre la imagen y el contenedor derecho */
+    }
+
+    .container {
+        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+        width: 90%; /* Ajusta el ancho del contenedor */
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 2vw 1vw; /* Ajusta el padding con unidades vw */
+    }
+
+    .main-title {
+        font-size: 6vw; /* Ajusta el tamaño de la fuente con unidades vw */
+    }
+
+    .subtitle {
+        font-size: 12vw; /* Ajusta el tamaño de la fuente con unidades vw */
+    }
+
+    .description {
+        font-size: 3vw; /* Ajusta el tamaño de la fuente con unidades vw */
+    }
+
+    .country-select {
+        font-size: 3vw; /* Ajusta el tamaño de la fuente con unidades vw */
+    }
+
+    .go-button {
+        font-size: 3vw; /* Ajusta el tamaño de la fuente con unidades vw */
+        padding: 1vw 3vw; /* Ajusta el padding con unidades vw */
+    }
+}
