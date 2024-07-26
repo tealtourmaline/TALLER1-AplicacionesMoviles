@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
   //asigna el valor inicial de la tecla a *
     teclas.forEach(function(teclas) {
         teclas.dataset.value = teclas.value;
-        teclas.value = '*';
     });
   
   // Funcion que asigna el valor real correspondiente a todas las teclas
@@ -88,11 +87,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función que oculta el valor de todas las teclas
     function ocultarValores() {
+      teclas.forEach(function(teclas) {
+        teclas.value = '*';
+        });
         teclas.forEach(function(teclas) {
         });
     }
 
-    // Añade listeners para todos los botones que muestran los valores, y los oculta cuando hacen contacto con el mouse
+    // Añade listeners para todos los botones que muestran los valores cuando entra el mouse, y los oculta cuando sale
     teclas.forEach(function(teclas) {
         teclas.addEventListener('mouseenter', ocultarValores);
         teclas.addEventListener('mouseleave', mostrarValores);
