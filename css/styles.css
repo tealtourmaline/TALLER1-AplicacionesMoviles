@@ -1,8 +1,6 @@
-/* styles.css */
-
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Cambia a Roboto para el texto general */
   background-color: #fff;
 }
 
@@ -49,6 +47,7 @@ nav {
   font-weight: bold;
   padding: 10px;
   font-size: 1rem; /* Tamaño de texto ajustable */
+  font-family: 'Lora', serif; /* Usa Lora para los enlaces del menú */
 }
 
 .menu a:hover {
@@ -61,11 +60,12 @@ nav {
   font-weight: bold;
   flex: 2;
   text-align: center;
+  font-family: 'Lora', serif; /* Usa Lora para el logo */
 }
 
 select {
   padding: 10px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 }
 
@@ -129,6 +129,7 @@ button.next {
   color: #a49999; /* Color del texto */
   font-size: clamp(1.2rem, 2vw, 2rem); /* Tamaño del texto responsivo */
   font-weight: bold; /* Negrita */
+  font-family: 'Lora', serif; /* Usa Lora para un estilo elegante */
   margin: 20px 0; /* Espaciado vertical */
   line-height: 1.0; /* Espaciado entre líneas */
 }
@@ -168,6 +169,7 @@ button.next {
 .gallery-item h1 {
   font-size: clamp(16px, 2.5vw, 18px); /* Tamaño de texto responsivo */
   font-weight: bold; /* Texto en negrita */
+  font-family: 'Montserrat', sans-serif; /* Usa Montserrat para hacer el texto de "Precio" más llamativo */
   color: #333; /* Color del texto */
   margin: 10px; /* Espaciado superior e inferior del texto */
   text-align: center; /* Centrar el texto */
@@ -224,6 +226,7 @@ main {
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* Usa Roboto para un estilo moderno */
 }
 
 .product img {
@@ -279,6 +282,7 @@ footer {
   margin: 15px 10px; /* Margen superior e inferior para los párrafos */
   font-weight: bold; /* Negrita para el texto */
   font-size: 14px; /* Tamaño del texto */
+  font-family: 'Lora', serif; /* Usa Lora para el texto del pie de página */
 }
 
 .footer-links {
@@ -291,11 +295,11 @@ footer {
   text-decoration: none;
   font-weight: bold; /* Negrita para los enlaces */
   transition: color 0.3s ease;
+  font-family: 'Lora', serif; /* Usa Lora para los enlaces del pie de página */
 }
 
 .footer-links a:hover {
   color: #FFD700;
-  
 }
 
 /* Responsive Design para el pie de página */
@@ -315,8 +319,6 @@ footer {
   }
 }
 
-
-
 /* Responsive Design */
 
 @media screen and (max-width: 768px) {
@@ -335,4 +337,3 @@ footer {
     margin: 0 auto;
   }
 }
-
